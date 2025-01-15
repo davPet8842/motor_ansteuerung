@@ -1,3 +1,4 @@
+let speed = 0
 function Motor_an_rechts () {
     images.arrowImage(ArrowNames.West).showImage(0)
     speed = 50
@@ -22,13 +23,6 @@ function LED_Aus () {
     MiniCar.PWM_LED_L(pwm_led_l.pwm_green_r, 255)
     MiniCar.PWM_LED_L(pwm_led_l.pwm_blue_r, 255)
 }
-input.onSound(DetectedSound.Loud, function () {
-    if (Roboter_Status == 0) {
-        Roboter_Status = 1
-    } else {
-        Roboter_Status = 0
-    }
-})
 function Motor_an_zurück (geschwindigkeit: number) {
     images.arrowImage(ArrowNames.South).showImage(0)
     MiniCar.motor(Motorlist.M1, Direction1.Backward, geschwindigkeit)
@@ -63,10 +57,3 @@ function Motor_an_links () {
     Motor_aus()
     Display_Löschen()
 }
-let Roboter_Status = 0
-let speed = 0
-Motor_aus()
-LED_Aus()
-basic.forever(function () {
-	
-})
