@@ -23,16 +23,10 @@ function LED_Aus () {
     MiniCar.PWM_LED_L(pwm_led_l.pwm_blue_r, 255)
 }
 input.onSound(DetectedSound.Loud, function () {
-    for (let index = 0; index < 4; index++) {
-        LED_An(0, 0, 255)
-        Motor_an_vor(255)
-        basic.pause(2000)
-        Motor_aus()
-        LED_Aus()
-        basic.pause(500)
-        LED_An(0, 255, 0)
-        Motor_an_rechts()
-        LED_Aus()
+    if (Roboter_Status == 0) {
+        Roboter_Status = 1
+    } else {
+        Roboter_Status = 0
     }
 })
 function Motor_an_zurück (geschwindigkeit: number) {
@@ -69,6 +63,7 @@ function Motor_an_links () {
     Motor_aus()
     Display_Löschen()
 }
+let Roboter_Status = 0
 let speed = 0
 Motor_aus()
 LED_Aus()
