@@ -1,5 +1,5 @@
 function Motor_an_rechts (speed: number) {
-    //images.arrowImage(ArrowNames.East).showImage(0)
+    // images.arrowImage(ArrowNames.East).showImage(0)
     MiniCar.motor(Motorlist.M1, Direction1.Forward, speed)
     MiniCar.motor(Motorlist.M2, Direction1.Backward, speed)
 }
@@ -20,29 +20,29 @@ function LED_Aus () {
     MiniCar.PWM_LED_L(pwm_led_l.pwm_blue_r, 255)
 }
 function Motor_an_zurück (geschwindigkeit: number) {
-    images.arrowImage(ArrowNames.South).showImage(0)
+    // images.arrowImage(ArrowNames.South).showImage(0)
     MiniCar.motor(Motorlist.M1, Direction1.Backward, geschwindigkeit)
     MiniCar.motor(Motorlist.M2, Direction1.Backward, geschwindigkeit)
 }
 function Motor_an_vor (geschwindigkeit: number) {
-    //images.arrowImage(ArrowNames.North).showImage(0)
+    // images.arrowImage(ArrowNames.North).showImage(0)
     MiniCar.motor(Motorlist.M1, Direction1.Forward, geschwindigkeit)
     MiniCar.motor(Motorlist.M2, Direction1.Forward, geschwindigkeit)
 }
 function Motor_aus () {
     MiniCar.motor(Motorlist.M1, Direction1.Forward, 0)
     MiniCar.motor(Motorlist.M2, Direction1.Forward, 0)
-    //Display_Löschen()
+    Display_Löschen()
 }
 function Motor_rechts_drehen () {
-    images.arrowImage(ArrowNames.West).showImage(0)
+    // images.arrowImage(ArrowNames.West).showImage(0)
     MiniCar.motor(Motorlist.M1, Direction1.Forward, 50)
     MiniCar.motor(Motorlist.M2, Direction1.Backward, 50)
     basic.pause(600)
     Motor_aus()
 }
 function Motor_links_drehen () {
-    images.arrowImage(ArrowNames.East).showImage(0)
+    // images.arrowImage(ArrowNames.East).showImage(0)
     MiniCar.motor(Motorlist.M1, Direction1.Backward, 50)
     MiniCar.motor(Motorlist.M2, Direction1.Forward, 50)
     basic.pause(600)
@@ -53,7 +53,7 @@ function Display_Löschen () {
     basic.clearScreen()
 }
 function Motor_an_links (speed: number) {
-    //images.arrowImage(ArrowNames.East).showImage(0)
+    // images.arrowImage(ArrowNames.East).showImage(0)
     MiniCar.motor(Motorlist.M1, Direction1.Backward, speed)
     MiniCar.motor(Motorlist.M2, Direction1.Forward, speed)
 }
